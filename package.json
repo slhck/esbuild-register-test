@@ -1,0 +1,21 @@
+{
+  "name": "esbuild-register-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start:esbuild": "NODE_OPTIONS=\"--loader esbuild-register/loader -r esbuild-register\" node index.ts 2>/dev/null",
+    "start:ts-node": "ts-node index.ts",
+    "start:tsx": "tsx index.ts",
+    "start:ts": "tsc && node index.js",
+    "start:ts-es2022": "tsc --target es2022 && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild-register": "^3.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
