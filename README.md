@@ -19,9 +19,14 @@ npm run start:ts
 
 You will see that the `esbuild-register` version does not work as expected and prints `undefined`.
 
-When using `es2022` syntax, the whole TypeScript file is invalid:
+When using `es2022` syntax, the whole TypeScript file is invalid. You can see this with:
 
-```
+```console
+$ npm run start:ts-es2022
+
+> esbuild-register-test@1.0.0 start:ts-es2022
+> tsc --target es2022 && node index.js
+
 index.ts:3:15 - error TS2729: Property 'bar' is used before its initialization.
 
 3     bar: this.bar,
